@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "5b810485-7252-4d75-83ff-bc61b53e1cd1",
+    "name": "firebase-emulator",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-11-20T20:41:29.028Z",
+    "modified": "2022-11-20T20:43:17.387Z",
+    "data": [
+      {
+        "name": "firebasefunctions",
+        "value": "http://127.0.0.1:5001/coscore/us-central1"
+      }
+    ]
+  },
+  {
+    "_id": "ba63bf31-3b1e-4c03-9950-3830ec5a86c0",
+    "name": "firebase",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2022-11-20T20:41:42.577Z",
+    "modified": "2022-11-20T20:41:42.577Z",
+    "data": []
+  }
+]
