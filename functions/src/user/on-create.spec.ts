@@ -1,12 +1,12 @@
 import { firestore } from 'firebase-admin';
 import firebaseFunctionsTest from 'firebase-functions-test';
 import { TestUtils } from "../../test/utils";
-import { authOnCreate as _authOnCreate } from './on-create';
+import { userOnCreate as _authOnCreate } from './on-create';
 
 const { wrap, auth } = firebaseFunctionsTest();
 
 
-describe('Auth', () => {
+describe('User', () => {
 
     describe('OnCreate', () => {
 
@@ -15,7 +15,7 @@ describe('Auth', () => {
             testEnv.clearFirestore();
         });
 
-        it('save user info to firestore /document/user/{uid}', async () => {
+        it('saves user info to firestore /document/user/{uid}', async () => {
 
             const user = auth.exampleUserRecord();
             const authOnCreate = wrap(_authOnCreate);
