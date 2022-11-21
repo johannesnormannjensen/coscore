@@ -7,7 +7,10 @@
     "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "functions:test": "nx test functions --runInBand",
+    "functions:deploy": "firebase deploy --only functions",
+    "functions:logs": "firebase functions:log"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +26,8 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nrwl/angular": "15.2.1",
+    "firebase-admin": "^11.3.0",
+    "firebase-functions": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.0",
     "tslib": "^2.3.0",
@@ -36,6 +41,7 @@
     "@angular/cli": "~15.0.0",
     "@angular/compiler-cli": "~15.0.0",
     "@angular/language-service": "~15.0.0",
+    "@firebase/rules-unit-testing": "^2.0.5",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
     "@nrwl/cli": "15.2.1",
@@ -48,6 +54,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.2.1",
     "@types/jest": "28.1.1",
+    "@types/jsdom": "^20.0.1",
     "@types/node": "18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
@@ -55,13 +62,17 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "firebase-functions-test": "^3.0.0",
     "jest": "28.1.1",
+    "@jest/globals": "^28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-preset-angular": "~12.2.2",
     "nx": "15.2.1",
     "prettier": "^2.6.2",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4"
   }
 }

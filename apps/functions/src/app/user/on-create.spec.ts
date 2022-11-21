@@ -5,7 +5,6 @@ import { userOnCreate as _authOnCreate } from './on-create';
 
 const { wrap, auth } = firebaseFunctionsTest();
 
-
 describe('User', () => {
 
     describe('OnCreate', () => {
