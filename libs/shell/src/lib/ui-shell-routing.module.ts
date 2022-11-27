@@ -5,12 +5,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('@coscore/home').then((m) => m.HomePageModule),
+      import('@coscore/home').then((m) => m.HomeModule),
   },
   {
     path: 'profile',
     loadChildren: () =>
-      import('@coscore/home').then((m) => m.HomePageModule),
+      import('@coscore/profile').then((m) => m.ProfileModule),
   },
   {
     path: '',
@@ -25,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class UIShellRoutingModule {}
+export class UIShellRoutingModule { }

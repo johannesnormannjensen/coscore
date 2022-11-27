@@ -3,10 +3,10 @@ import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'coscore-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.scss'],
 })
-export class HomePage {
+export class HomeComponent {
   
   isNative = Capacitor.getPlatform()
 }
