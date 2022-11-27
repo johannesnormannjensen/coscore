@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'shell.component.html',
   styleUrls: ['shell.component.scss'],
 })
-export class ShellComponent {}
+export class ShellComponent {
+
+
+}

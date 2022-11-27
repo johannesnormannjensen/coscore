@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'coscore-home',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor() {}
+  
+  isNative = Capacitor.getPlatform()
 }

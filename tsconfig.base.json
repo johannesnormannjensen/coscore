@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@coscore/home": ["libs/home/src/index.ts"],
+      "@coscore/profile": ["libs/profile/src/index.ts"],
       "@coscore/shell": ["libs/shell/src/index.ts"]
     }
   },

@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+      import('@coscore/home').then((m) => m.HomePageModule),
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('@coscore/home').then((m) => m.HomePageModule),
   },
   {
     path: '',
