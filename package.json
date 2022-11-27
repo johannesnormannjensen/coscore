@@ -27,6 +27,7 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@ngx-translate/core": "^14.0.0",
     "@nrwl/angular": "15.2.1",
     "firebase-admin": "^11.3.0",
     "firebase-functions": "^4.1.0",
