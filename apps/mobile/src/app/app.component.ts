@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'coscore-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  template: `
+    <coscore-shell></coscore-shell>
+  `,
 })
 export class AppComponent {
   constructor() {}

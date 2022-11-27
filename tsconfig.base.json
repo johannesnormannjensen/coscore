@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@coscore/ui/shell": ["libs/ui/shell/src/index.ts"]
+      "@coscore/shell": ["libs/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
