@@ -11,7 +11,7 @@ describe('User', () => {
 
         beforeEach(async () => {
             const testEnv = await TestUtils.initTestEnvironment();
-            testEnv.clearFirestore();
+            await testEnv.clearFirestore();
         });
 
         it('saves user info to firestore /document/user/{uid}', async () => {

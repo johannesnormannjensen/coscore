@@ -12,7 +12,7 @@ describe('Auth', () => {
 
         beforeEach(async () => {
             const testEnv = await TestUtils.initTestEnvironment();
-            testEnv.clearFirestore();
+            await testEnv.clearFirestore();
         });
 
         it('save user info to firestore /document/user/{uid}', async () => {
