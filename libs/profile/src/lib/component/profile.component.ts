@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '@coscore/service';
 
 @Component({
   selector: 'coscore-profile',
@@ -14,9 +16,19 @@ export class ProfileComponent {
 
   fg = this.fb.group({
     displayName: this.fb.control(this.displayName, Validators.required),
-  })
+  });
 
-  constructor(private fb: FormBuilder){
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private authService: AuthService,
+    private cd: ChangeDetectorRef
+  ) {
+  }
+
+  async logout(): Promise<void> {
+    await this.authService.logout();
+    this.router.navigate(['/']);
   }
 
 }

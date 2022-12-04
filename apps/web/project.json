@@ -15,7 +15,13 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/web/tsconfig.app.json",
         "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-        "styles": ["apps/web/src/styles.css"],
+        "inlineStyleLanguage": "scss",
+        "styles": [
+          "apps/mobile/src/styles.scss",
+          {
+            "input": "apps/mobile/src/theme/variables.scss"
+          }
+        ],
         "scripts": []
       },
       "configurations": {
@@ -30,6 +36,12 @@
               "type": "anyComponentStyle",
               "maximumWarning": "2kb",
               "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/web/src/environments/environment.ts",
+              "with": "apps/web/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"

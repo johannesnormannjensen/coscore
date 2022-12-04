@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AuthService } from '@coscore/service';
 
 @Component({
   selector: 'coscore-shell',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ShellComponent {
 
+  isLoggedIn$ = inject(AuthService).isLoggedIn$;
 
 }

@@ -17,7 +17,9 @@
     "paths": {
       "@coscore/data": ["libs/data/src/index.ts"],
       "@coscore/home": ["libs/home/src/index.ts"],
+      "@coscore/login": ["libs/login/src/index.ts"],
       "@coscore/profile": ["libs/profile/src/index.ts"],
+      "@coscore/service": ["libs/service/src/index.ts"],
       "@coscore/shell": ["libs/shell/src/index.ts"]
     }
   },

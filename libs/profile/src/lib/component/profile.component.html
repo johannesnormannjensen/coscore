@@ -13,10 +13,11 @@
     </div>
     <div class="d-flex justify-content-center">
       <ion-card-header>
-        <ion-card-title class="d-flex justify-content-center">{{displayName}}</ion-card-title>
+        <ion-card-title class="d-flex justify-content-center">{{ displayName }}</ion-card-title>
         <ion-card-subtitle class="d-flex justify-content-center">
-          <span>{{category}} rank:</span>
-          <ion-badge color="medium" class="ms-1">{{rank}}</ion-badge></ion-card-subtitle>
+          <span>{{ category }} rank:</span>
+          <ion-badge color="medium" class="ms-1">{{ rank }}</ion-badge></ion-card-subtitle
+        >
       </ion-card-header>
     </div>
   </ion-card>
@@ -29,7 +30,7 @@
       <ion-input formControlName="displayName" placeholder="Enter a displayname"></ion-input>
     </ion-item>
   </ion-list>
-    
+
   <ion-list class="mt-2">
     <ion-list-header>
       <ion-label>Participations</ion-label>
@@ -47,12 +48,12 @@
       <ion-label>Rankings</ion-label>
     </ion-item>
   </ion-list>
-    
+
   <ion-list class="mt-2">
     <ion-list-header>
       <ion-label>Settings</ion-label>
     </ion-list-header>
-    <ion-item button [detail]="true">
+    <ion-item button [detail]="true" (click)="logout()">
       <ion-icon name="log-out" slot="start"></ion-icon>
       <ion-label>Logout</ion-label>
     </ion-item>
