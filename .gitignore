@@ -45,3 +45,4 @@ Thumbs.db
 firestore-debug.log
 ui-debug.log
 firebase-debug.log
+libs/shell/src/lib/firebase-config.ts

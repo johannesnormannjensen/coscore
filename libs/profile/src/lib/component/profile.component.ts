@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Capacitor } from '@capacitor/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'coscore-profile',
@@ -7,6 +7,16 @@ import { Capacitor } from '@capacitor/core';
   styleUrls: ['profile.component.scss'],
 })
 export class ProfileComponent {
-  
-  isNative = Capacitor.getPlatform()
+  displayName = 'Nightb';
+
+  category = 'Foosball';
+  rank = 11;
+
+  fg = this.fb.group({
+    displayName: this.fb.control(this.displayName, Validators.required),
+  })
+
+  constructor(private fb: FormBuilder){
+  }
+
 }

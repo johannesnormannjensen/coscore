@@ -3,6 +3,58 @@
     <ion-title>Profile</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding">
-  {{isNative}}
+  <ion-card class="mx-3">
+    <div class="d-flex justify-content-center mt-3">
+      <ion-avatar>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      </ion-avatar>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ion-card-header>
+        <ion-card-title class="d-flex justify-content-center">{{displayName}}</ion-card-title>
+        <ion-card-subtitle class="d-flex justify-content-center">
+          <span>{{category}} rank:</span>
+          <ion-badge color="medium" class="ms-1">{{rank}}</ion-badge></ion-card-subtitle>
+      </ion-card-header>
+    </div>
+  </ion-card>
+  <ion-list [formGroup]="fg">
+    <ion-list-header>
+      <ion-label>Profile info</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Display name</ion-label>
+      <ion-input formControlName="displayName" placeholder="Enter a displayname"></ion-input>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list class="mt-2">
+    <ion-list-header>
+      <ion-label>Participations</ion-label>
+    </ion-list-header>
+    <ion-item button [detail]="true">
+      <ion-icon name="people-circle" slot="start"></ion-icon>
+      <ion-label>Teams</ion-label>
+    </ion-item>
+    <ion-item button [detail]="true">
+      <ion-icon name="game-controller" slot="start"></ion-icon>
+      <ion-label>Games</ion-label>
+    </ion-item>
+    <ion-item button [detail]="true">
+      <ion-icon name="star" slot="start"></ion-icon>
+      <ion-label>Rankings</ion-label>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list class="mt-2">
+    <ion-list-header>
+      <ion-label>Settings</ion-label>
+    </ion-list-header>
+    <ion-item button [detail]="true">
+      <ion-icon name="log-out" slot="start"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
