@@ -6,10 +6,11 @@ export const COSCORE_ENVIRONMENT = new InjectionToken<Environment>('COSCORE_ENVI
 @Injectable({ providedIn: 'root' })
 export class EnvironmentService {
 
-  constructor(@Inject(COSCORE_ENVIRONMENT) private readonly environment: Environment) { 
+  constructor(@Inject(COSCORE_ENVIRONMENT) private readonly environment: Environment) {
   }
 
   isProduction(): boolean {
     return this.environment.production;
   }
+
 }
